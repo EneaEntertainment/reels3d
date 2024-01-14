@@ -8,7 +8,7 @@ varying vec2 vUv;
 
 void main()
 {
-    vUv = aUv;
+    vUv = vec2(1.0) - aUv;
 
     gl_Position = pMatrix * mMatrix * vec4(aPosition, 1.0);
 }
