@@ -54,12 +54,19 @@ export class Reel extends Container
     {
         this.prevValue = 0;
 
-        const last = this.children[this.children.length - 1] as Sprite;
+        let last = this.children[0] as Sprite;
+
+        for (let i = 1; i < this.children.length; i++)
+        {
+            const current = this.children[i] as Sprite;
+
+            if (current.y > last.y)
+                last = current;
+        }
 
         last.y = -symbolSize;
-        last.texture = getRandomTexture();
 
-        this.addChildAt(last, 0);
+        last.texture = getRandomTexture();
     }
 
     start(delay: number)
