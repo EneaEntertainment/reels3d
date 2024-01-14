@@ -1,0 +1,35 @@
+{
+  "name": "reels3d",
+  "version": "0.0.1",
+  "author": "Martin Filo - Enea Entertainment",
+  "scripts": {
+    "assets": "node ./utils/texturepacker.js",
+    "build": "npm run assets && webpack --env target=www --mode=production",
+    "lint": "eslint \"src/**/*.ts\"",
+    "lintfix": "eslint \"src/**/*.ts\" --fix",
+    "start": "webpack serve --env --mode=development"
+  },
+  "volta": {
+    "node": "20.11.0",
+    "npm": "10.3.0"
+  },
+  "devDependencies": {
+    "@enea-entertainment/animjs": "^1.0.2",
+    "@types/stats.js": "^0.17.0",
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "@typescript-eslint/parser": "^6.1.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "eslint": "^8.45.0",
+    "eslint-plugin-import": "^2.27.5",
+    "gl-matrix": "^3.4.3",
+    "html-webpack-plugin": "^5.5.3",
+    "pixi.js": "^7.3.3",
+    "stats.js": "^0.17.0",
+    "ts-loader": "^9.4.4",
+    "ts-shader-loader": "^2.0.2",
+    "typescript": "^5.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
